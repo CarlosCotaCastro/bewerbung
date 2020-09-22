@@ -1,10 +1,6 @@
 <?php
 
-echo 'Test';
-die;
-
-
-include '../autoload.php';
+include '../app/autoload.php';
 
 $router = new class() {
 

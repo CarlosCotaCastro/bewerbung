@@ -1,5 +1,7 @@
 <?php
 
+define('APP_DIR',__DIR__);
+
 function MyAutoload($class) {
 
     if (substr($class, -4) == 'Page') {

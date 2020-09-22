@@ -18,15 +18,18 @@ abstract class Page {
         return
             '<html><head>'
             . '<title>'. $this->getTitle().'</title>'
+                . '<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">'
                 . '<link rel="stylesheet" href="/css/styles.css" type="text/css" />'
             . '</head>'
             . '<body>'
+                . '<div class="content">'
         ;
     }
 
     private function RenderFooter() : string {
         return
-            '</body>'
+            '</div>'
+            . '</body>'
             . '</html>'
         ;
     }

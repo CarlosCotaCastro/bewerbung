@@ -4,17 +4,46 @@ class FrontPage extends Page {
 
     protected function RenderContent(): string {
         return
-                '<h1>Carlos Cota Castro</h1>'
+                $this->RenderHeroBanner()
                 . $this->RenderProfile()
                 . $this->RenderProjects()
+                . $this->RenderInterestsSkript()
         ;
     }
 
-    private function RenderProfile(): string {
+    private function RenderHeroBanner() : string {
         return
-                '<h2>Profile</h2>'
-                . '<p>I am an Computer Scientist that worked for more than 20 years on online-shops for various companys.</p>'
-                . '<p>With my professional formation as salesman I learned the foundations of the domain knowledge, that are the base of why the projects </p>'
+            '<div class="hero">'
+                . '<div class="vc">'
+                    . '<h1>Hi! I am Carlos.</h1>'
+                    . '<h2>I like <span class="interests">programming</span>!</h2>'
+                    . '<h3>Get to know me better!</h3>'
+                .'</div>'
+            .'</div>'
+        ;
+    }
+    
+    private function RenderProfile(): string {
+        $github_url = 'https://github.com/CarlosCotaCastro/bewerbung';
+        return
+            '<div class="profile">'
+                .'<div class="wrapper">'
+                . '<h2>Introduction</h2>'
+                . '<p>I am an computer scientist that worked for more than 20 years on online shops. Since 2015 I was head of research and development at Tabac Benden in Düsseldorf.'
+                    . 'In that function I created a multi-user shopsystem, several brands and products and ultimatly a profit-making business for the company.'
+                . '</p>'
+                . '<p>Currently I am looking for a new business that I can help to grow with all my knowledge. '
+                    . 'Look around to get a detailed information about me an my past work.'
+                . '</p>'
+                . '<p>'
+                    . 'By the way: This website was also created to show a little bit of code to new employers. '
+                    . 'Check out the projects github page: '
+                    . '<a href="'.$github_url.'" rel="noopener">'
+                    . $github_url
+                    . '</a>'
+                . '</p>'
+                .'</div>'
+            .'</div>'
         ;
     }
 
@@ -32,6 +61,10 @@ class FrontPage extends Page {
 
     protected function getTitle(): string {
         return 'Carlos Cota Castro - Portfolio';
+    }
+
+    private function RenderInterestsSkript() : string {
+        return '<script type="text/javascript" src="/js/interests.js"></script>';
     }
 
 }

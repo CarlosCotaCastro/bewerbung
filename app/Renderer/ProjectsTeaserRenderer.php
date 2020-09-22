@@ -51,7 +51,7 @@ class ProjectsTeaserRenderer {
 
     private function getProjectsFromPagesDirectory() {
         $this->Projects = [];
-        $files = scandir('Projects/');
+        $files = scandir(APP_DIR.'/Projects/');
         foreach ($files as $file) {
             if (substr($file, 0, 1) != '.' && $file != 'Project.php') {
                 $class = basename('Projects/'.$file, '.php');
