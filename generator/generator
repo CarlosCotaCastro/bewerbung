@@ -1,0 +1,70 @@
+#!/usr/bin/php
+<?php
+include 'config/directories.php';
+include 'config/types.php';
+include 'tools/colorize.php';
+
+function __autoload($class_name) {
+    include 'generators/' . strtolower($class_name) . '.php';
+}
+
+
+class Main {
+
+    static $ClassType;
+    static $ClassName;
+
+    public static function Execute() {
+        try {
+            static::ReadArguments();
+            static::CreateClass();
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+            static::ShowUseMessage();
+        }
+    }
+
+    protected static function ReadArguments() {
+        try {
+            $argv = $_SERVER['argv'];
+            static::$ClassType = static::setClassType($argv[1]);
+            static::$ClassName = static::setClassName($argv[2]);
+        } catch (Exception $ex) {
+            throw new Exception(Fail('Die Eingabe war falsch') . "\n" . $ex->getMessage());
+        }
+    }
+
+        protected static function setClassType($type) {
+            if (in_array($type, TYPES)) {
+                return $type;
+            } else {
+                throw new Exception('Typ der Klasse war nicht korrekt');
+            }
+        }
+
+        protected static function setClassName($name) {
+            if ($name != '') {
+                return $name;
+            } else {
+                throw new Exception('Klassenbezeichner wurde nicht gesetzt.');
+            }
+        }
+
+    protected static function CreateClass() {
+        $generator_class = static::MakeGenerator();
+        $generator_class->MakeClassFile();
+    }
+
+    protected static function MakeGenerator() {
+        $generator_name = static::$ClassType;
+        return new $generator_name(static::$ClassName);
+    }
+
+    protected static function ShowUseMessage() {
+        $class_type_list = implode('|', TYPES);
+        echo "\n" . Note('Use: ./kaderschule [project_name|All|Shops] [' . $class_type_list . '] ClassName' . "\n");
+    }
+
+}
+
+Main::Execute();

@@ -1,0 +1,11 @@
+mediasizes = {
+	s: "(max-width: 28em)",
+	m: "(min-width: 28em) and (max-width: 48em)",
+	l: "(min-width: 48em) and (max-width: 64em)",
+	xl: "(min-width: 64em)"
+}
+for media in s m l xl
+	@media screen and (mediasizes[media])
+		for rows in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+			.col-{media}-{rows}
+				width percentage(round(5.55555555556 * rows, 2) / 100)
