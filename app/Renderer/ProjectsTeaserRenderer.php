@@ -3,23 +3,6 @@
 class ProjectsTeaserRenderer {
 
     private $Projects = [];
-    
-    /*
-
-        'Casabenden',
-        'Pipe Republic',
-        'Cigarren.de',
-        'McTrek',
-        'Cigarworld',
-        'Concretewave',
-        'Münz',
-        'SportImport',
-        'Felt',
-        'Rockshox',
-        'DieRasenmaeher',
-        'Vamos24',
-        'Bicycles.de',
-        'RB-Online',     */
 
     function __construct() {
         $this->getProjectsFromPagesDirectory();
@@ -43,7 +26,7 @@ class ProjectsTeaserRenderer {
     
         private function RenderProject(Project $p) {
             return 
-                '<li>'
+                '<li class="col-s-6 col-m-4 col-l-3 col-xl-2">'
                 . $p->RenderProjectPreview()
                 . '</li>'
             ;

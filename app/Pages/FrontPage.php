@@ -29,8 +29,8 @@ class FrontPage extends Page {
             '<div class="profile">'
                 .'<div class="wrapper">'
                 . '<h2>Introduction</h2>'
-                . '<p>I am an computer scientist that worked for more than 20 years on online shops. Since 2015 I was head of research and development at Tabac Benden in Düsseldorf.'
-                    . 'In that function I created a multi-user shopsystem, several brands and products and ultimatly a profit-making business for the company.'
+                . '<p>I am an computer scientist that worked for more than 20 years on online shops. Since 2015 I was the head of the research and development department at Tabac Benden in Düsseldorf. '
+                    . 'In that function I created a multishop system, several brands and products and ultimatly a profit-making business for the company.'
                 . '</p>'
                 . '<p>Currently I am looking for a new business that I can help to grow with all my knowledge. '
                     . 'Look around to get a detailed information about me an my past work.'
@@ -50,8 +50,12 @@ class FrontPage extends Page {
     private function RenderProjects(): string {
         $r = new ProjectsTeaserRenderer();
         return
-                '<h2>Past Projects</h2>'
+                '<div class="projects_teaser_container">'
+                . '<div class="wrapper">'
+                . '<h2>Past Projects</h2>'
                 . $r->Render()
+                . '</div>'
+                . '</div>'
         ;
     }
 

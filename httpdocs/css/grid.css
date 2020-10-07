@@ -1,216 +1,248 @@
-.col-s-1 {
-  width: 5.56%;
-}
-.col-s-2 {
-  width: 11.11%;
-}
-.col-s-3 {
-  width: 16.67%;
-}
-.col-s-4 {
-  width: 22.22%;
-}
-.col-s-5 {
-  width: 27.779999999999998%;
-}
-.col-s-6 {
-  width: 33.33%;
-}
-.col-s-7 {
-  width: 38.89%;
-}
-.col-s-8 {
-  width: 44.44%;
-}
-.col-s-9 {
-  width: 50%;
-}
-.col-s-10 {
-  width: 55.559999999999995%;
-}
-.col-s-11 {
-  width: 61.11%;
-}
-.col-s-12 {
-  width: 66.67%;
-}
-.col-s-13 {
-  width: 72.22%;
-}
-.col-s-14 {
-  width: 77.78%;
-}
-.col-s-15 {
-  width: 83.33%;
-}
-.col-s-16 {
-  width: 88.89%;
-}
-.col-s-17 {
-  width: 94.44%;
-}
-.col-s-18 {
-  width: 100%;
-}
-.col-m-1 {
-  width: 5.56%;
-}
-.col-m-2 {
-  width: 11.11%;
-}
-.col-m-3 {
-  width: 16.67%;
-}
-.col-m-4 {
-  width: 22.22%;
-}
-.col-m-5 {
-  width: 27.779999999999998%;
-}
-.col-m-6 {
-  width: 33.33%;
-}
-.col-m-7 {
-  width: 38.89%;
-}
-.col-m-8 {
-  width: 44.44%;
-}
-.col-m-9 {
-  width: 50%;
-}
-.col-m-10 {
-  width: 55.559999999999995%;
-}
-.col-m-11 {
-  width: 61.11%;
-}
-.col-m-12 {
-  width: 66.67%;
-}
-.col-m-13 {
-  width: 72.22%;
-}
-.col-m-14 {
-  width: 77.78%;
-}
-.col-m-15 {
-  width: 83.33%;
-}
-.col-m-16 {
-  width: 88.89%;
-}
-.col-m-17 {
-  width: 94.44%;
-}
-.col-m-18 {
-  width: 100%;
-}
-.col-l-1 {
-  width: 5.56%;
-}
-.col-l-2 {
-  width: 11.11%;
-}
-.col-l-3 {
-  width: 16.67%;
-}
-.col-l-4 {
-  width: 22.22%;
-}
-.col-l-5 {
-  width: 27.779999999999998%;
-}
-.col-l-6 {
-  width: 33.33%;
-}
-.col-l-7 {
-  width: 38.89%;
-}
-.col-l-8 {
-  width: 44.44%;
-}
-.col-l-9 {
-  width: 50%;
-}
-.col-l-10 {
-  width: 55.559999999999995%;
-}
-.col-l-11 {
-  width: 61.11%;
-}
-.col-l-12 {
-  width: 66.67%;
-}
-.col-l-13 {
-  width: 72.22%;
-}
-.col-l-14 {
-  width: 77.78%;
-}
-.col-l-15 {
-  width: 83.33%;
-}
-.col-l-16 {
-  width: 88.89%;
-}
-.col-l-17 {
-  width: 94.44%;
-}
-.col-l-18 {
-  width: 100%;
-}
-.col-xl-1 {
-  width: 5.56%;
-}
-.col-xl-2 {
-  width: 11.11%;
-}
-.col-xl-3 {
-  width: 16.67%;
-}
-.col-xl-4 {
-  width: 22.22%;
-}
-.col-xl-5 {
-  width: 27.779999999999998%;
-}
-.col-xl-6 {
-  width: 33.33%;
-}
-.col-xl-7 {
-  width: 38.89%;
-}
-.col-xl-8 {
-  width: 44.44%;
-}
-.col-xl-9 {
-  width: 50%;
-}
-.col-xl-10 {
-  width: 55.559999999999995%;
-}
-.col-xl-11 {
-  width: 61.11%;
-}
-.col-xl-12 {
-  width: 66.67%;
-}
-.col-xl-13 {
-  width: 72.22%;
-}
-.col-xl-14 {
-  width: 77.78%;
-}
-.col-xl-15 {
-  width: 83.33%;
-}
-.col-xl-16 {
-  width: 88.89%;
-}
-.col-xl-17 {
-  width: 94.44%;
-}
-.col-xl-18 {
-  width: 100%;
+@media screen and (max-width: 767px) {
+  .col-s-1 {
+    width: 8.333333333333334%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-2 {
+    width: 16.666666666666668%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-3 {
+    width: 25%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-4 {
+    width: 33.333333333333336%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-5 {
+    width: 41.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-6 {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-7 {
+    width: 58.333333333333336%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-8 {
+    width: 66.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-9 {
+    width: 75%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-10 {
+    width: 83.33333333333334%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-11 {
+    width: 91.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-s-12 {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .col-m-1 {
+    width: 8.333333333333334%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-2 {
+    width: 16.666666666666668%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-3 {
+    width: 25%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-4 {
+    width: 33.333333333333336%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-5 {
+    width: 41.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-6 {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-7 {
+    width: 58.333333333333336%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-8 {
+    width: 66.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-9 {
+    width: 75%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-10 {
+    width: 83.33333333333334%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-11 {
+    width: 91.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-m-12 {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .col-l-1 {
+    width: 8.333333333333334%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-2 {
+    width: 16.666666666666668%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-3 {
+    width: 25%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-4 {
+    width: 33.333333333333336%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-5 {
+    width: 41.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-6 {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-7 {
+    width: 58.333333333333336%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-8 {
+    width: 66.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-9 {
+    width: 75%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-10 {
+    width: 83.33333333333334%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-11 {
+    width: 91.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-l-12 {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .col-xl-1 {
+    width: 8.333333333333334%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-2 {
+    width: 16.666666666666668%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-3 {
+    width: 25%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-4 {
+    width: 33.333333333333336%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-5 {
+    width: 41.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-6 {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-7 {
+    width: 58.333333333333336%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-8 {
+    width: 66.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-9 {
+    width: 75%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-10 {
+    width: 83.33333333333334%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-11 {
+    width: 91.66666666666667%;
+    float: left;
+    overflow: hidden;
+  }
+  .col-xl-12 {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+  }
 }

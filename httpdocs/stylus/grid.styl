@@ -1,0 +1,15 @@
+grid(indicator)
+	for num in 1 2 3 4 5 6 7 8 9 10 11 12
+		.col-{indicator}-{num}
+			width ((100/12) * num)%
+			float left
+			overflow hidden
+
+@media screen and (max-width: 767px)
+	grid(s)
+@media screen and (min-width: 768px) and (max-width: 1023px)
+	grid(m)
+@media screen and (min-width: 1024px) and (max-width: 1439px)
+	grid(l)
+@media screen and (min-width: 1440px)
+	grid(xl)

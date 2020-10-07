@@ -1,5 +1,10 @@
 <?php
 
+// router.php
+if (preg_match('/\.(?:png|jpg|jpeg|gif|ttf|woff|css|js)$/', $_SERVER["REQUEST_URI"])) {
+    return false; // Liefere die angefragte Ressource direkt aus
+}
+
 include '../app/autoload.php';
 
 $router = new class() {
