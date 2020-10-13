@@ -12,8 +12,12 @@ function MyAutoload($class) {
         include 'Renderer/' . $class . '.php';
     }
     
-     if (substr($class, -7) == 'Project') {
+    if (substr($class, -7) == 'Project') {
         include 'Projects/' . $class . '.php';
+    }
+    
+    if (substr($class, -6) == 'Helper') {
+        include 'Helper/' . $class . '.php';
     }
 }
 

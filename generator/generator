@@ -62,7 +62,7 @@ class Main {
 
     protected static function ShowUseMessage() {
         $class_type_list = implode('|', TYPES);
-        echo "\n" . Note('Use: ./kaderschule [project_name|All|Shops] [' . $class_type_list . '] ClassName' . "\n");
+        echo "\n" . Note('Use: ./generator [' . $class_type_list . '] ClassName' . "\n");
     }
 
 }

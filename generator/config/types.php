@@ -1,3 +1,3 @@
 <?php
 
-const TYPES = ['Page', 'Renderer', 'Project'];
+const TYPES = ['Page', 'Renderer', 'Project','Helper'];
