@@ -1,26 +1,26 @@
 <?php
 
-class TabacBendenProject extends \Project {
+class WebstoreProject extends \Project {
     
 
     public function getName(): string {
-        return 'Tabac Benden GmbH';
+        return 'WS Web-Store GmbH';
     }
 
     public function getSlug(): string {
-        return 'tabac-benden';
+        return 'web-store';
     }
 
     public function getThumbnailHandle(): string {
-        return 'tabac-benden';
+        return 'web-store';
     }
     
     public function getPosition(): string {
-        return 'Head of research and development';
+        return 'Senior Developer';
     }
 
     public function getTimespan(): string {
-        return 'May 2015 - October 2020';
+        return 'September 1999 - April 2015';
     }
 
 

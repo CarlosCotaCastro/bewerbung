@@ -1,28 +1,26 @@
 <?php
 
-class TabacBendenProject extends \Project {
+class XTMProject extends \Project {
     
 
     public function getName(): string {
-        return 'Tabac Benden GmbH';
+        return 'X-TM GmbH';
     }
 
     public function getSlug(): string {
-        return 'tabac-benden';
+        return 'x-tm';
     }
 
     public function getThumbnailHandle(): string {
-        return 'tabac-benden';
+        return 'stadionwelt';
     }
     
     public function getPosition(): string {
-        return 'Head of research and development';
+        return 'working student';
     }
 
     public function getTimespan(): string {
-        return 'May 2015 - October 2020';
+        return 'October 2008 - April 2009';
     }
-
-
     
 }
