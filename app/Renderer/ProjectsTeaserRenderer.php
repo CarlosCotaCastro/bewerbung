@@ -17,20 +17,11 @@ class ProjectsTeaserRenderer {
 
     private function RenderList(): string {
         $ret = '';
-        
         foreach ($this->Projects as $p) {
-            $ret .= $this->RenderProject($p);
+            $ret .= $p->RenderProjectPreview();
         }
         return $ret;
     }
-    
-        private function RenderProject(Project $p) {
-            return 
-                '<li class="col-s-6 col-m-4 col-l-3 col-xl-2">'
-                . $p->RenderProjectPreview()
-                . '</li>'
-            ;
-        }
 
     private function getProjectsFromPagesDirectory() {
         $this->Projects = [];

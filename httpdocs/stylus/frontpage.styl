@@ -1,0 +1,41 @@
+.hero
+	background url(/img/hero.jpg) no-repeat right #cfcfcf
+	background-size 50%
+	color #333
+	height 70vh
+	position relative
+	&:afer
+		clearfix()
+	strong
+		color #249858
+	h1
+		padding-top 3em
+	h1,h3
+		font-size 1.5em
+	h2
+		font-size 2em
+	h3
+		margin-bottom .5em
+.projects_teaser_container
+	background #999
+	padding 3em 0
+	&:after
+		clearfix()
+	a
+		display block
+		color #ffffff
+		background #000000
+		text-decoration none
+		overflow hidden
+		border-radius .5em
+		box-shadow 10px 10px 10px 0px rgba(255,255,255,.1)
+		&:after
+			clearfix()
+		.more
+			margin-top 1em
+			text-align right
+	@media screen and (max-width: 767px)
+		img
+			float left
+			width 40%
+			margin-right 5%
