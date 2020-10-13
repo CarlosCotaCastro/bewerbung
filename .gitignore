@@ -2,3 +2,7 @@ phpunit
 .DS_Store
 .phpunit.result.cache
 httpdocs/.htaccess
+/node_modules/
+/package-lock.json
+Vorlagen
+.psd
