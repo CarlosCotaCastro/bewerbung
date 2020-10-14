@@ -6,13 +6,12 @@ abstract class Project {
     abstract public function getName() : string;
     abstract public function getSlug() : string;
     abstract public function getPosition() : string;
-    
-    // Yes i know that i could implement to return an timespan object, but that seams overkill for this small project.
-    abstract public function getTimespan() : string; 
+    abstract public function getBegin() : DateTime;
+    abstract public function getEnd() : DateTime;
     
     public function RenderProjectPreview() {
         return
-            '<li class="col-s-12 col-m-4 col-l-3 col-xl-3">'
+            '<li class="col-xl-3 col-l-3 col-m-4 col-s-12 ">'
             . '<div class="gutter">'
                 . '<a href="/projects/'.$this->getSlug().'">'
                 . $this->RenderImage()
@@ -59,6 +58,16 @@ abstract class Project {
             . 'Position: '
             . $this->getPosition()
             . '</div>'
+        ;
+    }
+    
+    public function getTimespan(): string {
+        $from = $this->getBegin();
+        $to = $this->getEnd();
+        return 
+           $from->format('M Y')
+           .' - '
+           . $to->format('M Y')
         ;
     }
 

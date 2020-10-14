@@ -19,8 +19,12 @@ class XTMProject extends \Project {
         return 'working student';
     }
 
-    public function getTimespan(): string {
-        return 'October 2008 - April 2009';
+    public function getBegin(): \DateTime {
+        return new DateTime('2008-10-01');
     }
-    
+
+    public function getEnd(): \DateTime {
+        return new DateTime('2009-03-31');
+    }
+
 }

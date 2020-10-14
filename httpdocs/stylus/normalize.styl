@@ -1,9 +1,13 @@
-$headline_font = 'Quicksand'
+$headline_font = 'Open Sans Condensed', sans-serif
 body
 	font-family sans-serif
-html,body,p,h1,h2,h3,h4,h5,h6,div,hr,span,ul,li
+html
+	background $lightblue
+html,body,p,h1,h2,h3,h4,h5,h6,div,hr,span,ul,li,article,section,aside
 	padding 0
 	margin 0
+	list-style-type none
+	display block
 img
 	display block
 	width 100%
@@ -16,4 +20,7 @@ h3
 	font-size 1.5em
 p
 	margin-bottom 2em
-	max-width 30em
+section
+	padding 3em 0
+	&:after
+		clearfix()

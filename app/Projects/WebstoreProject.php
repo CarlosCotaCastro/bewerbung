@@ -19,10 +19,13 @@ class WebstoreProject extends \Project {
         return 'Senior Developer';
     }
 
-    public function getTimespan(): string {
-        return 'September 1999 - April 2015';
+    public function getBegin(): \DateTime {
+        return new DateTime('2012-07-01');
     }
 
+    public function getEnd(): \DateTime {
+        return new DateTime('2015-04-30');
+    }
 
     
 }

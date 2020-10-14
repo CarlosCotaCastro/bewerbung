@@ -32,5 +32,10 @@ class ProjectsTeaserRenderer {
                 $this->Projects[] = new $class();
             }
         }
+        usort($this->Projects, ['ProjectsTeaserRenderer', 'CompareTime']);
+    }
+    
+    public static function CompareTime($a, $b) {
+        return ($b->getBegin() <=> $a->getBegin());
     }
 }

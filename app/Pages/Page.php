@@ -18,15 +18,20 @@ abstract class Page {
         return
             '<html><head>'
             . '<title>'. $this->getTitle().'</title>'
-                . '<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">'
                 . '<link rel="stylesheet" href="/css/styles.css" type="text/css" />'
                 . $this->RenderAutoReloadSkript()
             . '</head>'
             . '<body>'
+                . $this->RenderMenu()
                 . '<div class="content">'
         ;
     }
 
+    private function RenderMenu() : string {
+        $r = new MenuRenderer();
+        return $r->Render();
+    }
+    
     private function RenderFooter() : string {
         return
             '</div>'
@@ -39,6 +44,18 @@ abstract class Page {
         return (EnviromentHelper::isDevelopment())
             ? '<script src="//localhost:35729/livereload.js"></script>'
             : ''
+        ;
+    }
+    
+     protected function RenderContainer(string $class, string $content) : string {
+        return
+            '<section class="'.$class.'">'
+                . '<div class="wrapper">'
+                    . '<div class="gutter">'
+                    . $content
+                 . '</div>'
+                . '</div>'
+            . '</section>'
         ;
     }
 

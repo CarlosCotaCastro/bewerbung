@@ -1,15 +1,15 @@
 .hero
-	background url(/img/hero.jpg) no-repeat right #cfcfcf
-	background-size 50%
-	color #333
-	height 70vh
+	background rgb(52,62,68);
+	background radial-gradient(circle, $lightblue 0%, $darkblue 100%)
+	color #fff
+	height 50vh
 	position relative
+	text-align center
+	overflow hidden
 	&:afer
 		clearfix()
 	strong
-		color #249858
-	h1
-		padding-top 3em
+		color $green
 	h1,h3
 		font-size 1.5em
 	h2
@@ -18,7 +18,6 @@
 		margin-bottom .5em
 .projects_teaser_container
 	background #999
-	padding 3em 0
 	&:after
 		clearfix()
 	a
@@ -34,8 +33,24 @@
 		.more
 			margin-top 1em
 			text-align right
-	@media screen and (max-width: 767px)
-		img
-			float left
-			width 40%
-			margin-right 5%
+.education
+	background $darkblue
+	color #f0f0f0
+	ul:not(.achievements)
+		> li
+			border .3em solid $lightblue
+			margin-bottom 1em
+			padding 1em
+			.institution
+				color $lightblue
+				margin 0
+			.date
+				display inline-block
+				background $green
+				padding .3em .6em
+				border-radius .3em
+				font-size .8em
+			ul
+				li
+					margin-top .5em
+				

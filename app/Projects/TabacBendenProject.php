@@ -19,10 +19,11 @@ class TabacBendenProject extends \Project {
         return 'Head of research and development';
     }
 
-    public function getTimespan(): string {
-        return 'May 2015 - October 2020';
+    public function getBegin(): \DateTime {
+        return new DateTime('2015-05-01');
     }
 
-
-    
+    public function getEnd(): \DateTime {
+        return new DateTime('2020-10-31');
+    }
 }

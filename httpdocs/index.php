@@ -1,10 +1,5 @@
 <?php
 
-// router.php
-if (preg_match('/\.(?:png|jpg|jpeg|gif|ttf|woff|woff2|css|js)$/', $_SERVER["REQUEST_URI"])) {
-    return false; // Liefere die angefragte Ressource direkt aus
-}
-
 include '../app/autoload.php';
 
 $router = new class() {
@@ -12,12 +7,31 @@ $router = new class() {
     private $Page;
 
     public function Execute() {
-        $this->setPage();
-        $this->RenderPage();
+        try {
+            $this->setPage();
+            $this->RenderPage();
+        } catch (Exception $ex) {
+            return false;
+        }
     }
 
     private function setPage() {
-        $this->Page = 'FrontPage';
+        $url = $_SERVER['REQUEST_URI'];
+        
+        $pages = [
+            '/' => 'FrontPage',
+            '/projects/tabac-benden' => 'TabacBendenPage',
+            '/projects/x-tm' => 'XTMPage',
+            '/projects/web-store' => 'WebStorePage',
+            '/projects/rb-online' => 'RBOnlinePage',
+        ];
+        
+        if (array_key_exists($url, $pages)) {
+            $this->Page = $pages[$url];
+        } else {
+            throw new Exception('Url not found');
+        }
+        
     }
 
     private function RenderPage() {
