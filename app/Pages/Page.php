@@ -47,9 +47,9 @@ abstract class Page {
         ;
     }
     
-     protected function RenderContainer(string $class, string $content) : string {
+     protected function RenderContainer(string $id, string $content) : string {
         return
-            '<section class="'.$class.'">'
+            '<section id="'.$id.'">'
                 . '<div class="wrapper">'
                     . '<div class="gutter">'
                     . $content

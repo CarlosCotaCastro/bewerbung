@@ -48,7 +48,7 @@ class MenuRenderer {
         
         $o = new stdClass();
         $o->Label = 'Hire me!';
-        $o->Url = '/#hire-me';
+        $o->Url = '/#hire_me';
         $ret[] = $o;
         
         return $ret;

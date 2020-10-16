@@ -8,12 +8,13 @@ class FrontPage extends Page {
                 . $this->RenderIntroduction()
                 . $this->RenderExperience()
                 . $this->RenderEducation()
+                . $this->RenderHireMe()
         ;
     }
 
     private function RenderHeroBanner() : string {
         return
-            '<div class="hero">'
+            '<div id="hero">'
                 . '<div class="wrapper">'    
                     . '<div class="col-xl-6 col-l-6 col-m-6 col-s-12 vc">'
                         . '<h1>Hi! I am Carlos.</h1>'
@@ -26,10 +27,10 @@ class FrontPage extends Page {
     }
     
     private function RenderIntroduction() {
-        return $this->RenderContainer('Introduction',
+        return $this->RenderContainer('introduction',
             
             '<h2>Introduction</h2>'
-            .'<div class="col-xl-6 col-l-6 col-m-6 col-s-12">'
+            .'<div class="col-xl-12 col-l-12 col-m-6 col-s-12">'
             . '<p>I am an computer scientist that worked for more than 20 years on online shops. Since 2015 I was the head of the research and development department at Tabac Benden in Düsseldorf. '
                 . 'In that function I created a multishop system, several brands and products and ultimatly a profit-making business for the company.'
             . '</p>'
@@ -44,14 +45,19 @@ class FrontPage extends Page {
                 . '</a>.'
             . '</p>'
             . '</div>'
+            . $this->RenderSkills()
         );
     }
    
+    private function RenderSkills() {
+        $r = new SkillListRenderer();
+        return $r->Render();
+    }
 
     private function RenderExperience(): string {
         $r = new ProjectsTeaserRenderer();
         return 
-                '<section class="projects_teaser_container">'
+                '<section id="experience">'
                 . '<div class="wrapper">'
                     . '<div class="gutter">'
                         . '<h2>Experience:</h2>'
@@ -61,6 +67,20 @@ class FrontPage extends Page {
                 . '</section>'
         ;
     }
+    
+    private function RenderEducation() : string {
+        $r = new EducationRenderer();
+        return $this->RenderContainer( 'education', $r->Render() );
+    }
+    
+    private function RenderHireMe() : string {
+        $r = new ContactRenderer();
+        return $this->RenderContainer('hire_me', 
+                '<h2>Hire me!</h2>'
+                . '<p>I am looking forward to hear from you!</p>'
+                . $r->Render()
+        );
+    }
 
     protected function getMetaDescription(): string {
         return 'My private page to showcase a little bit of what I programmed since 1999.';
@@ -69,12 +89,5 @@ class FrontPage extends Page {
     protected function getTitle(): string {
         return 'Carlos Cota Castro - Portfolio';
     }
-
-    private function RenderEducation() : string {
-        $r = new EducationRenderer();
-        return $this->RenderContainer( 'education', $r->Render() );
-    }
-    
-   
 
 }

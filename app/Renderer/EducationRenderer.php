@@ -29,6 +29,7 @@ class EducationRenderer {
         $d->Title = 'Graduated with Bachelor in Computer Science';
         $d->Institution = 'Heinrich-Heine University Düsseldorf';
         $d->SpecialAchievement[] = '2nd place in the practical programming course of 2005.';
+        $d->SpecialAchievement[] = 'Bachelor-Thesis: '. _ELink('Creation of an homework submission tool with PHP.', 'https://auas.cs.uni-duesseldorf.de/');
         $d->SpecialAchievement[] = 'Layouted the students newspaper.';
         $d->SpecialAchievement[] = 'Elected for students parliament for three years.';
         $d->SpecialAchievement[] = 'Worked in the unit of political education for the students representation.';

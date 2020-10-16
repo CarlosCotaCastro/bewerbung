@@ -11,7 +11,7 @@ abstract class Project {
     
     public function RenderProjectPreview() {
         return
-            '<li class="col-xl-3 col-l-3 col-m-4 col-s-12 ">'
+            '<li class="col-xl-3 col-l-3 col-m-6 col-s-12 ">'
             . '<div class="gutter">'
                 . '<a href="/projects/'.$this->getSlug().'">'
                 . $this->RenderImage()

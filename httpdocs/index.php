@@ -1,8 +1,9 @@
 <?php
 
 include '../app/autoload.php';
+include '../app/shortcuts.php';
 
-$router = new class() {
+$app = new class() {
 
     private $Page;
 
@@ -42,4 +43,4 @@ $router = new class() {
 
 };
 
-$router->Execute();
+$app->Execute();
