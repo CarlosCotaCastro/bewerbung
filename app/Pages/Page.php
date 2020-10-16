@@ -16,10 +16,12 @@ abstract class Page {
 
     private function RenderHead() : string {
         return
-            '<html><head>'
-            . '<title>'. $this->getTitle().'</title>'
+            '<html>'
+            . '<head>'
+                . '<title>'. $this->getTitle().'</title>'
                 . '<link rel="stylesheet" href="/css/styles.css" type="text/css" />'
-                . $this->RenderAutoReloadSkript()
+                . '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+                . $this->RenderAutoReloadSkript()    
             . '</head>'
             . '<body>'
                 . $this->RenderMenu()
