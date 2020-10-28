@@ -1,3 +1,4 @@
+@require mixins
 grid(indicator)
 	for num in 1 2 3 4 5 6 7 8 9 10 11 12
 		.col-{indicator}-{num}
@@ -5,13 +6,13 @@ grid(indicator)
 			float left
 			overflow hidden
 
-@media screen and (min-width: 1440px)
+@media screen and (min-width: $start_desktop)
 	grid(xl)
-@media screen and (min-width: 1024px) and (max-width: 1439px)
+@media screen and (min-width: $start_laptop) and (max-width: $end_laptop)
 	grid(l)
-@media screen and (min-width: 768px) and (max-width: 1023px)
+@media screen and (min-width: $start_tablet) and (max-width: $end_tablet)
 	grid(m)
-@media screen and (max-width: 767px)
+@media screen and (max-width: $end_mobile)
 	grid(s)
 
 

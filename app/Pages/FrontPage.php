@@ -40,18 +40,28 @@ class FrontPage extends Page {
             . '<p>'
                 . 'By the way: This website was also created to show a little bit of code to new employers. '
                 . 'Check out '
-                . '<a href="'.$github_url.'" rel="noopener">'
+                . '<a href="https://github.com/CarlosCotaCastro/bewerbung" rel="noopener">'
                 . 'this projects github page'
                 . '</a>.'
             . '</p>'
             . '</div>'
             . $this->RenderSkills()
+            . $this->RenderHobbies()
         );
     }
    
     private function RenderSkills() {
         $r = new SkillListRenderer();
         return $r->Render();
+    }
+    
+    private function RenderHobbies() {
+        return 
+            '<div class="col-xl-12 col-l-12 col-m-6 col-s-12">'
+                .'<h3>Hobbies</h3>'
+                . 'Football, road cycling, punk concerts, meeting with friends, Chaos Computer Club.'
+            . '</div>'
+        ;
     }
 
     private function RenderExperience(): string {

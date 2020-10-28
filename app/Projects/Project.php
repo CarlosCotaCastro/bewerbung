@@ -13,14 +13,15 @@ abstract class Project {
         return
             '<li class="col-xl-3 col-l-3 col-m-6 col-s-12 ">'
             . '<div class="gutter">'
-                . '<a href="/projects/'.$this->getSlug().'">'
+                . '<div class="employment">'
+                //. '<a href="/projects/'.$this->getSlug().'">'
                 . $this->RenderImage()
                 . '<div class="gutter">'
                     . '<h3>'.$this->getName().'</h3>'
                     . $this->RenderAbstract()
-                    . '<p class="more">More Information</p>'
+                    //. '<p class="more">More Information</p>'
                 . '</div>'
-                . '</a>'
+                //. '</a>'
             . '</div>'
             . '</li>'
         ;        

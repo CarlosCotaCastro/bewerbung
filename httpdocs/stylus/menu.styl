@@ -1,23 +1,43 @@
+@require mixins
+/**
+I am not implementing a burger menu right now. Maybe later.
+*/
 .menu
 	position absolute
-	top 0
+	top 1em
 	left 0
-	padding 1em 0
 	z-index 2
 	width 100%
+	.logo
+		svg
+			display block
+			max-width 420px
+			margin 0 auto
 	a
-		display inline
 		color #fff
 		text-decoration none
 	.menu_items
-		float right
-		li
+		display none
+@media screen and (min-width: $start_tablet)
+	.menu
+		padding 1em 0
+		.logo
+			svg
+				margin 0
+		.opener
+			display none
+		a
 			display inline
-			margin-left 1em
-			&:last-child
-				a
-					background $green
-					padding .3em .5em .2em
-					border-radius .5em
+		.menu_items
+			display block
+			float right
+			li
+				display inline
+				margin-left 1em
+				&:last-child
+					a
+						background $green
+						padding .3em .5em .2em
+						border-radius .5em
 		
 
