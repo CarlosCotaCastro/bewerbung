@@ -19,9 +19,11 @@ abstract class Page {
             '<html>'
             . '<head>'
                 . '<title>'. $this->getTitle().'</title>'
-                . '<link rel="stylesheet" href="/css/styles.css" type="text/css" />'
+                . '<link rel="stylesheet preload" href="/css/styles.css" type="text/css" />'
+                . '<link rel="preload" href="/fonts/OpenSansCondensed-Light.woff2" as="font" />'
+                . '<link rel="preload" href="/fonts/OpenSansCondensed-Bold.woff2" as="font" />'
                 . '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
-                . $this->RenderAutoReloadSkript()    
+                . $this->RenderAutoReloadSkript()
             . '</head>'
             . '<body>'
                 . $this->RenderMenu()
