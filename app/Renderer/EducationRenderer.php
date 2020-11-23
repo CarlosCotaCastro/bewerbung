@@ -2,6 +2,12 @@
 
 class EducationRenderer {
 
+    private array $Degrees = [];
+    
+    function __construct(array $Degrees) {
+        $this->Degrees = $Degrees;
+    }
+    
 	public function Render() : string {
 		return 
             $this->RenderHeadLine()
@@ -21,38 +27,6 @@ class EducationRenderer {
         return '<ul>'.$ret.'</ul>';
     }
     
-    private function getDegrees() : array {
-        $ret = [];
-        
-        $d = new stdClass();
-        $d->Date = 'June 2013';
-        $d->Title = 'Graduated with Bachelor in Computer Science';
-        $d->Institution = 'Heinrich-Heine University Düsseldorf';
-        $d->SpecialAchievement[] = '2nd place in the practical programming course of 2005.';
-        $d->SpecialAchievement[] = 'Bachelor-Thesis: '. _ELink('Creation of an homework submission tool with PHP.', 'https://auas.cs.uni-duesseldorf.de/');
-        $d->SpecialAchievement[] = 'Aside discipline: information science';
-        $d->SpecialAchievement[] = 'Layouted the students newspaper.';
-        $d->SpecialAchievement[] = 'Elected for students parliament for three years.';
-        $d->SpecialAchievement[] = 'Worked in the unit of political education for the students representation.';
-        $ret[] = $d;
-        
-        $d = new stdClass();
-        $d->Date = 'July 2004';
-        $d->Title = 'Graduation as computer science salesman';
-        $d->Institution = 'Riemke und Bruser GbR and Walter-Eucken Berufskolleg';
-        $d->SpecialAchievement = [];
-        $ret[] = $d;
-        
-        $d = new stdClass();
-        $d->Date = 'June 2002';
-        $d->Title = 'Highschool graduation';
-        $d->Institution = 'Gymnasium Vogelsang in Solingen';
-        $d->SpecialAchievement = [];
-        $ret[] = $d;
-        
-        return $ret;
-    }
-
     private function RenderDegree(stdClass $d) : string {
         return
             '<li>'
@@ -74,4 +48,17 @@ class EducationRenderer {
             : '<ul class="achievements">'.$ret.'</ul>'
         ;
     }
+    
+    private function getDegreesFile(): string {
+        return $this->DegreesFile;
+    }
+    
+    function getDegrees(): array {
+        return $this->Degrees;
+    }
+
+    function setDegrees(array $Degrees): void {
+        $this->Degrees = $Degrees;
+    }
+
 }

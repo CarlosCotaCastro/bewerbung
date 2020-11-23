@@ -73,7 +73,9 @@ class FrontPage extends Page {
     }
     
     private function RenderEducation() : string {
-        $r = new EducationRenderer();
+        $json = file_get_contents(APP_DIR.'/data/degrees.json');
+        $degrees = json_decode($json);
+        $r = new EducationRenderer($degrees);
         return $this->RenderContainer( 'education', $r->Render() );
     }
     

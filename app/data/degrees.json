@@ -1,0 +1,27 @@
+[
+	{
+		"Title": "Graduated with Bachelor in Computer Science",
+		"Date": "June 2013",
+		"Institution": "Heinrich-Heine University Düsseldorf",
+        "SpecialAchievement": [
+			"2nd place in the practical programming course of 2005.",
+			"Bachelor-Thesis: <a href=\"https://auas.cs.uni-duesseldorf.de/\" target=\"_blank\" class=\"external\" rel=\"noopener\">Creation of an homework submission tool with PHP.</a>",
+			"Aside discipline: information science",
+			"Layouted the students newspaper.",
+			"Elected for students parliament for three years.",
+			"Worked in the unit of political education for the students representation."
+		]
+	},
+	{
+		"Title": "Graduation as computer science salesman",
+		"Date": "July 2004",
+		"Institution": "Riemke und Bruser GbR and Walter-Eucken Berufskolleg",
+        "SpecialAchievement": []
+	},
+	{
+		"Title": "Highschool graduation",
+		"Date": "June 2002",
+		"Institution": "Gymnasium Vogelsang in Solingen",
+        "SpecialAchievement": []
+	}
+]

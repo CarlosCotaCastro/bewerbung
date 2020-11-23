@@ -21,10 +21,12 @@ $app = new class() {
         
         $pages = [
             '/' => 'FrontPage',
+            /* planned:
             '/projects/tabac-benden' => 'TabacBendenPage',
             '/projects/x-tm' => 'XTMPage',
             '/projects/web-store' => 'WebStorePage',
             '/projects/rb-online' => 'RBOnlinePage',
+             */
         ];
         
         if (array_key_exists($url, $pages)) {

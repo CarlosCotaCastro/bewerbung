@@ -1,6 +1,6 @@
 <?php
 
-abstract class Project {
+abstract class Project { // You could call this a decorator.
 
     abstract public function getThumbnailHandle() : string;
     abstract public function getName() : string;
