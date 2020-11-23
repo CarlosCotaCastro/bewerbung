@@ -37,13 +37,7 @@ class FrontPage extends Page {
             . '<p>Currently I am looking for a new business that I can help to grow with all my knowledge. '
                 . 'Look around to get a detailed information about me an my past work.'
             . '</p>'
-            . '<p>'
-                . 'By the way: This website was also created to show a little bit of code to new employers. '
-                . 'Check out '
-                . '<a href="https://github.com/CarlosCotaCastro/bewerbung" rel="noopener">'
-                . 'this projects github page'
-                . '</a>.'
-            . '</p>'
+                . $this->RenderGitHubParagraph()
             . '</div>'
             . $this->RenderSkills()
             . $this->RenderHobbies()
@@ -59,7 +53,7 @@ class FrontPage extends Page {
         return 
             '<div class="col-xl-12 col-l-12 col-m-6 col-s-12">'
                 .'<h3>Hobbies</h3>'
-                . 'Football, road cycling, punk concerts, meeting with friends, Chaos Computer Club.'
+                . 'In times without a pandemic: Football, road cycling, punk concerts, meeting with friends, Chaos Computer Club.'
             . '</div>'
         ;
     }
@@ -98,6 +92,21 @@ class FrontPage extends Page {
 
     protected function getTitle(): string {
         return 'Carlos Cota Castro - Portfolio';
+    }
+
+    private function RenderGitHubParagraph() : string {
+        
+        return ''; // I don't feeld comfortable with publishing the code right now.
+        
+        return
+            '<p>'
+                . 'By the way: This website was also created to show a little bit of code to new employers. '
+                . 'Check out '
+                . '<a href="https://github.com/CarlosCotaCastro/bewerbung" rel="noopener">'
+                . 'this projects github page'
+                . '</a>.'
+            . '</p>'
+        ;
     }
 
 }
