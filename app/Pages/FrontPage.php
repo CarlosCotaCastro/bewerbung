@@ -97,9 +97,6 @@ class FrontPage extends Page {
     }
 
     private function RenderGitHubParagraph() : string {
-        
-        return ''; // I don't feeld comfortable with publishing the code right now.
-        
         return
             '<p>'
                 . 'By the way: This website was also created to show a little bit of code to new employers. '
