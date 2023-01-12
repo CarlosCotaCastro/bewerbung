@@ -104,7 +104,7 @@ class FrontPage extends Page {
                 . 'this projects github page'
                 . '</a>.'
             . '</p>'
-	        . '<p>Yes this is a bit old-school, but this website is focussed on performance. Also: What is the point in showing that someone can read the manual of a framework?</p>'
+	        . '<p>Yes this is a bit old-school, but this website is focussed on performance. Besides: What is the point in showing that someone can read the manual of a framework?</p>'
         ;
     }
 
