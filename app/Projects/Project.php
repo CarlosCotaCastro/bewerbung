@@ -7,11 +7,11 @@ abstract class Project { // You could call this a decorator.
     abstract public function getSlug() : string;
     abstract public function getPosition() : string;
     abstract public function getBegin() : DateTime;
-    abstract public function getEnd() : DateTime;
+    abstract public function getEnd() : ?DateTime;
     
     public function RenderProjectPreview() {
         return
-            '<li class="col-xl-3 col-l-3 col-m-6 col-s-12 ">'
+            '<li class="col-xl-3 col-l-3 col-m-4 col-s-12 ">'
             . '<div class="gutter">'
                 . '<div class="employment">'
                 //. '<a href="/projects/'.$this->getSlug().'">'
@@ -65,10 +65,11 @@ abstract class Project { // You could call this a decorator.
     public function getTimespan(): string {
         $from = $this->getBegin();
         $to = $this->getEnd();
+        $end = (is_null($to)) ? 'now' : $to->format('M Y');
         return 
            $from->format('M Y')
            .' - '
-           . $to->format('M Y')
+           . $end
         ;
     }
 

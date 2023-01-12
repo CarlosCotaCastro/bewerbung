@@ -18,7 +18,7 @@ class FrontPage extends Page {
                 . '<div class="wrapper">'    
                     . '<div class="col-xl-6 col-l-6 col-m-6 col-s-12 vc">'
                         . '<h1>Hi! I am Carlos.</h1>'
-                        . '<h2>I create <strong>successfull online shops</strong>!</h2>'
+                        . '<h2>I create software since 1999!</h2>'
                         . '<h3>Get to know me better!</h3>'
                     .'</div>'
                 .'</div>'
@@ -31,12 +31,11 @@ class FrontPage extends Page {
             
             '<h2>Introduction</h2>'
             .'<div class="col-xl-12 col-l-12 col-m-6 col-s-12">'
-            . '<p>I am an computer scientist that worked for more than 20 years on online shops. Since 2015 I was the head of the research and development department at Tabac Benden in Düsseldorf. '
-                . 'In that function I created a multishop system, several brands and products and ultimatly a profit-making business for the company.'
+            . '<p>I am an computer scientist that worked for more than 20 years on online shops, . Since 2015 I was the head of the research and development department at Tabac Benden in Düsseldorf. '
+                . 'In that function I created a multi-shop system, several brands and products and ultimately a profit-making business for the company.'
             . '</p>'
-            . '<p>Currently I am looking for a new business that I can help to grow with all my knowledge. '
-                . 'Look around to get a detailed information about me an my past work.'
-            . '</p>'
+            . '<p>Since 2021 I work for henworx GmbH & Co. KG. As a senior developer I wrote software with PHP, Laravel, React, React Native and if needed with Java.</p>'
+            . '<p>My enjoy writing stable, clean software. Writing unit tests is not a burden, but a relief for me.</p>'
                 . $this->RenderGitHubParagraph()
             . '</div>'
             . $this->RenderSkills()
@@ -105,6 +104,7 @@ class FrontPage extends Page {
                 . 'this projects github page'
                 . '</a>.'
             . '</p>'
+	        . '<p>Yes this is a bit old-school, but this website is focussed on performance. Also: What is the point in showing that someone can read the manual of a framework?</p>'
         ;
     }
 

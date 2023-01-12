@@ -67,8 +67,8 @@ class SkillListRenderer {
 
     private function getLanguages(): array {
         return [
-            'PHP 7.4',
-            'Javascript (mostly with jQuery, but moving towards vanila js)',
+            'PHP',
+            'Javascript (jQuery, React, Typescript)',
             'SQL',
             'HTML5',
             'CSS3',
@@ -79,7 +79,6 @@ class SkillListRenderer {
             'english (almost like a native)',
             'gallego (native)',
             'spanish (native)',
-            'portugese (beginner)'
         ];
     }
 
@@ -89,18 +88,25 @@ class SkillListRenderer {
             'My own php-generator skript',
             'PHPUnit',
             'MariaDB',
+	        'Laravel',
+	        'React',
+	        'React Native',
             'Elasticsearch',
             'nginx',
             'Git',
-            'Stylus',
+            'npm',
+	        'composer',
             'Linux (Ubuntu on Servers)',
             'MacOS (for Desktop)',
+	        'Windows (to see what users see)',
             'iTerm2',
+	        'Docker Desktop',
             'Adobe Photoshop',
             'Adobe Premiere',
             'Adobe Illustrator',
             'Adobe XD',
             'Adobe Dimension',
+	        'Stylus',
             'Grunt',
             'Netbeans (for private use)',
             'PyCharm',
