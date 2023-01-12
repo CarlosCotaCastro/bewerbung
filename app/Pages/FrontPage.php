@@ -35,7 +35,7 @@ class FrontPage extends Page {
                 . 'In that function I created a multi-shop system, several brands and products and ultimately a profit-making business for the company.'
             . '</p>'
             . '<p>Since 2021 I work for henworx GmbH & Co. KG. As a senior developer I wrote software with PHP, Laravel, React, React Native and if needed with Java.</p>'
-            . '<p>My enjoy writing stable, clean software. Writing unit tests is not a burden, but a relief for me.</p>'
+            . '<p>I enjoy writing stable, clean software. Writing unit tests is not a burden, but a relief for me.</p>'
                 . $this->RenderGitHubParagraph()
             . '</div>'
             . $this->RenderSkills()
