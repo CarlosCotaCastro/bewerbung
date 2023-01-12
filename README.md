@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- php7.4 (should work with never versions.)
+- php7.4 (should work with newer versions.)
 - node.js
 
 ## Run locally
